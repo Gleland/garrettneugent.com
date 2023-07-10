@@ -1,28 +1,23 @@
 <footer class="footer">
   <div class="footer__inner">
     {{ if $.Site.Copyright }}
-      <div class="copyright copyright--user">{{ $.Site.Copyright | safeHTML }}</div>
-      {{ else }}
-      {{ partial "logo.html" . }}
-      <div class="copyright">
-        <span
-          >Follow on
-          <a href="https://mastodon.social/@garrettneugent" target="_blank" rel="me">Mastodon</a></span
+    <div class="copyright copyright--user">{{ $.Site.Copyright | safeHTML }}</div>
+    {{ else }}
+    {{ partial "logo.html" . }}
+    <div class="copyright">
+      <span>Follow on
+        <a rel="me" href="https://hachyderm.io/@garrettneugent">Mastodon</a>
         >
-        <span
-          >© {{ now.Year }} Powered by
-          <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span
-        >
-      </div>
-        <span
-          >Hosted on
-          <a href="https://github.com/Gleland/garrettneugent.com" target="_blank" rel="noopener">Github</a></span
-        >
+        <span>© {{ now.Year }} Powered by
+          <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span>
+    </div>
+    <span>Hosted on
+      <a href="https://github.com/Gleland/garrettneugent.com" target="_blank" rel="noopener">Github</a></span>
     {{ end }}
   </div>
 </footer>
 
-<script src="{{ "assets/main.js" | absURL }}"></script>
-<script src="{{ "assets/prism.js" | absURL }}"></script>
+<script src="{{ " assets/main.js" | absURL }}"></script>
+<script src="{{ " assets/prism.js" | absURL }}"></script>
 
 {{- partial "extended_footer.html" . }}
